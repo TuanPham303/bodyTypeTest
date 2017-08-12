@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+  <div id="bodyType">
+    <h1>What is your body type?</h1>
+    <div class="bodyTypeImgWrap">
+      <div class="bodyTypeImg" v-for="img in imgs">
+        <img v-bind:src="img.src" alt="">
+        <ul> {{img.title}}
+          <li v-for="li in img.lis">{{li}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="bodyTypeWrap">
+      <div class="bodyType" v-for='bodyType in bodyTypes'>{{bodyType}}</div><br>
+    </div>
+    <button v-on:click="toggleQuiz" href="#bodyTypeQuiz">Not sure? Let's find out what your body type is</button> 
+  </div>
+  
+  <form id="bodyTypeQuiz" v-show="viewQuiz">
+    <div class="question">{{questions[i]}}</div>
+    <div class="answerWrap">
+      <div class="answer" v-for="answer in answers[i]">
+        <input type="radio" name="answer" v-on:click="result" v-bind:value="answer" > {{answer}} 
+      </div>
+    </div>
+    <input type="button" v-on:click="nextQuestion" value="Next"> 
+  </form>  
+
+  <div id="result" v-show="showResult">
+    <div id="answer"></div>
+    <button v-on:click="toggleQuiz">X</button>
+  </div>
+
+  <script src='script.js'></script>
+</body>
+</html> 

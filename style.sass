@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans')
+
+*
+  margin: 0
+  padding: 0
+  body, html
+    height: 100vh
+    width: 100vw
+    font-family: 'Open Sans', sans-serif
+    background-color: #E4F1FE
+    #bodyType
+      width: 100%
+      text-align: center
+      h1
+        color: #22313F
+        margin-top: 30px
+      .bodyTypeWrap
+        display: flex
+        flex-direction: row
+        .bodyType
+          flex: 1
+          margin: 30px 40px
+      .bodyTypeImgWrap
+        display: flex
+        flex-direction: row
+        margin-top: 20px
+        .bodyTypeImg
+          flex: 1
+          ul
+            list-style-type: none
+            font-weight: 900
+            letter-spacing: 7px
+            li
+              font-weight: 300
+              letter-spacing: 0px
+      button
+        height: 60px
+        padding: 0 20px
+        border: none
+        border-radius: 5px
+        background-color: #22A7F0
+        color: #fff
+        font-size: 20px
+        margin-bottom: 50px
+        &:focus
+          outline: 0
+    #bodyTypeQuiz
+      position: fixed
+      top: 0
+      height: 100vh
+      width: 100vw
+      background-color: rgba(0,0,0,.9)
+      text-align: center
+      .question
+        height: 60px
+        width: 800px
+        margin: 50px auto 0
+        background-color: #2C3E50
+        color: #fff
+        text-align: center
+        line-height: 60px
+        font-size: 20px
+      .answerWrap
+        width: 800px
+        height: 200px
+        background-color: #336E7B
+        margin: 0 auto
+        .answer
+          height: calc(200px/3)
+          font-size: 20px
+          line-height: calc(200px/3)
+          color: #fff
+          input
+            height: 20px
+            width: 20px
+      input
+        width: 800px
+        height: 50px
+        font-size: 20px
+        border: none
+        background-color: #2C3E50
+        color: #fff
+        &:focus
+          outline: 0
+    #result
+      height: 100vh
+      width: 100vw
+      background-color: rgba(0,0,0,0.9)
+      position: fixed
+      top: 0
+      color: #fff
+      #answer
+        text-align: center
+        font-size: 20px
+        line-height: 100vh
+      button
+        color: #fff
+        position: absolute
+        top: 10px
+        left: 10px
+        font-size: 20px
+        height: 30px
+        width: 30px
+        background-color: #EC644B
+        border: none
