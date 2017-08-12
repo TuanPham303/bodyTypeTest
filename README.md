@@ -1,1 +1,1 @@
-# bodyTypeTest
+Run index.html and check what your body type is :)
