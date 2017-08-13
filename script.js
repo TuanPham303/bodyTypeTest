@@ -70,7 +70,7 @@ var bodyTypeQuiz = new Vue ({
       bodyTypeQuiz.i++;
       if (bodyTypeQuiz.i == bodyTypeQuiz.questions.length) {
         result.showResult = true;
-        document.getElementById('answer').innerHTML = 'Your body type is: ' + bodyTypeQuiz.ectoRatio + '% Endomorph, ' + bodyTypeQuiz.endoRatio + '% Mesomorph and ' + bodyTypeQuiz.mesoRatio + '% Ectomorph.';
+        document.getElementById('answer').innerHTML = 'Your body type is: ' + bodyTypeQuiz.endoRatio + '% Endomorph, ' + bodyTypeQuiz.mesoRatio + '% Mesomorph and ' + bodyTypeQuiz.ectoRatio + '% Ectomorph.';
       }
       var ele = document.getElementsByName('answer');
       for (var i = 0; i < ele.length; i++) {
