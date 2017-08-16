@@ -105,9 +105,10 @@ var result = new Vue ({
     showResult: false,
   },
   methods: {
-    toggleQuiz: function(){
+    closeQuiz: function(){
       result.showResult = false;
       bodyTypeQuiz.viewQuiz = !bodyTypeQuiz.viewQuiz;
+      location.reload();
     }
   }
 });
